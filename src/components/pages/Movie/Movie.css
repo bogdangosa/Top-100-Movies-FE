@@ -1,0 +1,11 @@
+.Movie{
+    width: 100%;
+    min-height: 100vh;
+    padding: 7rem 5% 0 5%;
+}
+
+.movie-image{
+    width: 60%;
+    height: 60vh;
+    object-fit: cover;
+}
