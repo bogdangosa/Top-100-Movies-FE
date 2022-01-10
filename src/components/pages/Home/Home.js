@@ -5,7 +5,7 @@ import searchIcon from '../../../assets/search-icon.png';
 import {Link} from 'react-router-dom';
 
 
-function Home() {
+function Home(props) {
   const [Data,setData] = useState([]);
   const [SearchText,SetSearchText] = useState("");
   const [Page,setPage] = useState(1);
@@ -37,6 +37,17 @@ function Home() {
     const result = await response.json();
     console.log(result);
     setData(result.results);
+  }
+
+  const SearchMovieinUsersList = (curent_movie_id) =>{
+    if(props.user==null)
+      return false;
+    console.log(props.movie_list);
+    for(let i=0;i<props.movie_list.length;i++){
+      if(props.movie_list[i].movieid==curent_movie_id)
+        return true;
+    }
+    return false;
   }
 
   return (
@@ -71,7 +82,7 @@ function Home() {
           {
             Data.map((MovieData,index)=>{
               return(
-              <MovieCard name={MovieData.original_title} image={MovieData.backdrop_path} vote_average={MovieData.vote_average}key={index} id={MovieData.id}/>
+              <MovieCard name={MovieData.original_title} image={MovieData.backdrop_path} vote_average={MovieData.vote_average}key={index} id={MovieData.id} added={SearchMovieinUsersList(MovieData.id)}/>
               )
             })
           }

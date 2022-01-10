@@ -34,6 +34,14 @@ function Header(props) {
             {user==undefined?<li className="nav-links login-btn" onClick={()=>OpenLogin()}>Login</li>:<></>}
             {user!=undefined?  <Link to='/MyAccount' className="nav-links login-btn"><li>My Account</li></Link>:<></>}
         </ul>
+
+        <ul className={HamburgerState?"nav-mobile":"nav-mobile nav-mobile-visible"}>
+            <Link to='/' className="nav-links"><li>Home</li></Link>
+            <Link to='/MyList' className="nav-links"><li>My List</li></Link>
+            {user==undefined?<li className="nav-links login-btn" onClick={()=>OpenLogin()}>Login</li>:<></>}
+            {user!=undefined?  <Link to='/MyAccount' className="nav-links login-btn"><li>My Account</li></Link>:<></>}
+        </ul>
+
         <div className={HamburgerState ? "hamburger" : "hamburger close-hamburger"} onClick={()=>setHamburgerState(!HamburgerState)}>
                 <div className="line line1"></div>
                 <div className="line line2"></div>

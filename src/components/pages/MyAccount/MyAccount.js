@@ -8,6 +8,11 @@ function MyAccount(props) {
         <div className="upper-section-myaccount">
           <h1 className="myaccount-email">{props.user.email}</h1>
         </div>
+         
+        <div className="">
+          <p>Sign out</p>
+          <p>Delete account</p>
+        </div>
     </div>
   );
 }

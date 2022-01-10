@@ -15,3 +15,47 @@
     bottom: 2rem;
     font-size: 3rem;
 }
+
+.list_edit_btn{    
+    position: absolute;
+    bottom: 2rem;
+    right: 5%;
+    padding: 1rem;
+}
+
+.movie-list-container{
+    width: 100%;
+    padding: 3rem 5%;
+}
+.card_my_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding:1.5rem;
+    color:#fff;
+    background: #4F4F4F;
+    margin:1.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.movie_name{
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.remove_movie_btn{
+    padding: 0.2rem 1rem;
+    color:#868686;
+    border-radius: 5rem;
+    border: 2px solid #868686;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: 0.5s ease;
+}
+
+.remove_movie_btn:hover{
+    color:#DA4646;
+    border:2px solid #DA4646;
+}

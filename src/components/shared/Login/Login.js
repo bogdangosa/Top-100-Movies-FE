@@ -64,7 +64,7 @@ const Login = (props) =>{
             <h2 className="login-title">Login</h2>
             {WrongAcc?<p>wrong email or password</p>:<></>}
             <input className="email-input login-input" placeholder="email" type="text"value={email} onChange={(e)=>setemail(e.target.value)} />
-            <input className="password-input login-input" placeholder="password" type="text"value={password} onChange={(e)=>setpassword(e.target.value)}/>
+            <input className="password-input login-input" placeholder="password" type="password"value={password} onChange={(e)=>setpassword(e.target.value)}/>
             <div className="sign-up-question">
                 <p>you dont have an account?</p>
                 <p className="red" onClick={props.openSignUp}>sign up</p>
